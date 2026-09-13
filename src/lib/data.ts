@@ -1,0 +1,127 @@
+export const projects = [
+  {
+    name: 'AI Research Agent',
+    description: 'Custom agent loop (no framework) combining document RAG with live web search. Streams tool calls live via SSE. Built with FastAPI, ChromaDB, Groq Llama 3.1 8B.',
+    tech: ['Python', 'FastAPI', 'ChromaDB', 'Groq', 'SSE'],
+    github: 'https://github.com/Praansu/ai-research-agent',
+    demo: 'https://praansu.github.io/ai-research-agent',
+    icon: 'Brain',
+    highlight: 'No-framework agent loop with transparent fallback',
+  },
+  {
+    name: 'PDF Chat RAG',
+    description: 'Full RAG pipeline with document CRUD, streaming SSE responses, and GDPR-compliant deletion. PyMuPDF extraction, sentence-transformers embeddings, ChromaDB retrieval.',
+    tech: ['Python', 'FastAPI', 'ChromaDB', 'PyMuPDF', 'SSE'],
+    github: 'https://github.com/Praansu/pdf-chat-rag',
+    demo: 'https://praansu.github.io/pdf-chat-rag',
+    icon: 'Database',
+    highlight: 'Full CRUD + streaming + GDPR-compliant deletion',
+  },
+  {
+    name: 'Vehicle Image Classifier',
+    description: 'ResNet18 transfer learning classifying bus/car/motorcycle/truck at 90% accuracy (400 images). Includes confusion matrix visualization and FastAPI inference API.',
+    tech: ['PyTorch', 'ResNet18', 'FastAPI', 'Docker'],
+    github: 'https://github.com/Praansu/vehicle-image-classifier',
+    demo: 'https://praansu.github.io/vehicle-image-classifier',
+    icon: 'Award',
+    highlight: 'Confusion matrix + per-class accuracy, not just 90%',
+  },
+  {
+    name: 'EcoVerda',
+    description: 'Full-stack e-commerce for eco products — Next.js 16, TypeScript, Prisma, Stripe. Blur-up image placeholders, debounced search with URL sync, cart persistence.',
+    tech: ['Next.js 16', 'TypeScript', 'Prisma', 'Stripe', 'Tailwind'],
+    github: 'https://github.com/Praansu/eco-verda',
+    demo: 'https://praansu.github.io/eco-verda',
+    icon: 'Globe',
+    highlight: 'Static export + blur-up placeholders + debounced search',
+  },
+  {
+    name: 'ParkX',
+    description: 'IoT smart parking system — ESP32 firmware, FastAPI backend, real-time web dashboard with AI chatbot and booking system.',
+    tech: ['ESP32', 'FastAPI', 'WebSockets', 'IoT'],
+    github: 'https://github.com/Praansu/ParkX',
+    demo: null,
+    icon: 'Server',
+    highlight: 'ESP32 + FastAPI + real-time dashboard',
+  },
+  {
+    name: 'Small Agent Reliability',
+    description: 'Research: evaluating 9 models (1B–9B) as autonomous agents across 31 capability tasks + 14 reliability tasks. Qwen 2.5 Coder 7B leads at 85% composite reliability.',
+    tech: ['Python', 'Ollama', 'Statistical Analysis', 'LaTeX'],
+    github: 'https://github.com/Praansu/small-agent-reliability',
+    demo: null,
+    icon: 'BookOpen',
+    highlight: 'Reliability ≠ model size; code-specialization beats raw scale',
+  },
+];
+
+export const skills = {
+  'ML/AI': [
+    { name: 'PyTorch', level: 90 },
+    { name: 'scikit-learn', level: 85 },
+    { name: 'XGBoost', level: 80 },
+    { name: 'OpenCV', level: 75 },
+    { name: 'sentence-transformers', level: 85 },
+  ],
+  'LLM/RAG': [
+    { name: 'Groq (Llama 3)', level: 90 },
+    { name: 'ChromaDB', level: 90 },
+    { name: 'Agent loops (no framework)', level: 85 },
+    { name: 'Tool calling', level: 85 },
+    { name: 'RAG pipelines', level: 90 },
+  ],
+  'Backend': [
+    { name: 'FastAPI', level: 90 },
+    { name: 'Python', level: 95 },
+    { name: 'Prisma ORM', level: 80 },
+    { name: 'SQLite/PostgreSQL', level: 80 },
+    { name: 'Docker', level: 80 },
+  ],
+  'Frontend': [
+    { name: 'Next.js 14/15', level: 85 },
+    { name: 'TypeScript', level: 85 },
+    { name: 'Tailwind CSS', level: 90 },
+    { name: 'React', level: 85 },
+    { name: 'Vanilla JS', level: 80 },
+  ],
+  'IoT/Other': [
+    { name: 'ESP32/Arduino', level: 75 },
+    { name: 'Git/GitHub Actions', level: 85 },
+    { name: 'Linux/CLI', level: 80 },
+    { name: 'LaTeX', level: 70 },
+  ],
+};
+
+export const experience = [
+  {
+    role: 'CS Student',
+    company: 'Islington College, Kathmandu',
+    period: '2023 — Present',
+    description: 'Bachelor of Computer Science. Focus on ML, AI, and full-stack development.',
+  },
+  {
+    role: 'Freelance AI/ML Engineer',
+    company: 'Self-employed',
+    period: '2024 — Present',
+    description: 'Building RAG pipelines, custom agent loops, ML model deployment, and full-stack AI products for clients.',
+  },
+];
+
+export const freelanceServices = [
+  'RAG pipeline development — FastAPI + ChromaDB + Groq/OpenAI, streaming SSE, document CRUD',
+  'Custom agent loops — No-framework agent design, tool calling, RAG + web search, transparent fallbacks',
+  'ML model deployment — PyTorch models → FastAPI + Docker, GPU/CPU optimization',
+  'Full-stack AI products — Next.js + TypeScript + Prisma + Stripe, production-ready',
+  'ML model training & deployment — PyTorch, transfer learning (ResNet, MobileNet, EfficientNet), FastAPI + Docker',
+  'Computer vision pipelines — Image classification, object detection, data augmentation, model optimization',
+  'MLOps — Model versioning, CI/CD for ML, Docker containerization, GPU/CPU optimization',
+  'Full-stack e-commerce development — Next.js 15/16 + TypeScript + Prisma + Stripe, production-ready',
+  'Payment integration — Stripe checkout, subscriptions, webhooks, PCI compliance awareness',
+  'Database design & migration — Prisma schema design, SQLite → PostgreSQL migration, seed data',
+  'Auth systems — NextAuth.js (credentials, OAuth, JWT), protected routes, session management',
+  'Performance optimization — Static export, image optimization (blur-up placeholders), debounced search with URL sync',
+  'LLM evaluation & benchmarking — Custom agent harnesses, capability/reliability suites, temperature sweeps, cost-reliability analysis',
+  'Agent architecture design — Tool-calling loops, RAG integration, fault tolerance patterns, safety guardrails',
+  'Model selection & optimization — Quantization (GGUF), context window tuning, inference optimization for local deployment',
+  'Research engineering — Reproducible experiment pipelines, statistical analysis, paper-ready visualizations',
+];
