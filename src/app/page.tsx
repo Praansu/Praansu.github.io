@@ -32,6 +32,7 @@ import {
   Mail as MailIcon,
   MapPin,
   GraduationCap,
+  TrendingUp,
 } from 'lucide-react';
 import './globals.css';
 
