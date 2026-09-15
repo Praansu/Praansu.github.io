@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, ExternalLink, Brain, Database, Award, Globe, Server, BookOpen } from 'lucide-react';
+import { Github, ExternalLink, Brain, Database, Award, Globe, Server, BookOpen, TrendingUp } from 'lucide-react';
 
 interface ProjectCardProps {
   name: string;
@@ -18,6 +18,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Globe,
   Server,
   BookOpen,
+  TrendingUp,
 };
 
 export function ProjectCard({ name, description, tech, github, demo, icon: IconName, highlight }: ProjectCardProps) {
