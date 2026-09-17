@@ -45,15 +45,6 @@ export const projects = [
     highlight: 'Time-series feature engineering + model comparison, not just accuracy',
   },
   {
-    name: 'EcoVerda',
-    description: 'Full-stack e-commerce for eco products — Next.js 16, TypeScript, Prisma, Stripe. Blur-up image placeholders, debounced search with URL sync, cart persistence.',
-    tech: ['Next.js 16', 'TypeScript', 'Prisma', 'Stripe', 'Tailwind'],
-    github: 'https://github.com/Praansu/eco-verda',
-    demo: 'https://praansu.github.io/eco-verda',
-    icon: 'Globe',
-    highlight: 'Static export + blur-up placeholders + debounced search',
-  },
-  {
     name: 'ParkX',
     description: 'IoT smart parking system — ESP32 firmware, FastAPI backend, real-time web dashboard with AI chatbot and booking system.',
     tech: ['ESP32', 'FastAPI', 'WebSockets', 'IoT'],

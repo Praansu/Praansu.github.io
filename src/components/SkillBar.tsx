@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 interface SkillBarProps {
   name: string;
   level: number;
@@ -11,9 +15,12 @@ export function SkillBar({ name, level }: SkillBarProps) {
         <span className="text-gray-500 dark:text-dark-400">{level}%</span>
       </div>
       <div className="h-2 bg-gray-100 dark:bg-dark-800 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-primary-600 dark:bg-primary-500 rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${level}%` }}
+        <motion.div
+          className="h-full bg-gradient-to-r from-primary-700 via-primary-500 to-emerald-400 rounded-full"
+          initial={{ width: 0 }}
+          whileInView={{ width: `${level}%` }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         />
       </div>
     </div>
