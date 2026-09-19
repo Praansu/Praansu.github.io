@@ -1,50 +1,68 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Merriweather } from 'next/font/google';
+import { Playfair_Display, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-display',
+  weight: ['500', '600', '700', '800'],
+  style: ['normal', 'italic'],
 });
 
-const merriweather = Merriweather({
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-merriweather',
-  weight: ['400', '700'],
+  variable: '--font-serif',
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+  weight: ['400', '500', '600'],
 });
 
 export const metadata: Metadata = {
   title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
-  description: 'CS student at Islington College, Kathmandu. Building ML models & AI products — PyTorch, RAG, agent tool-calling, Next.js, TypeScript.',
-  keywords: ['AI Engineer', 'ML Engineer', 'Full-Stack Developer', 'PyTorch', 'RAG', 'Next.js', 'TypeScript', 'Freelance'],
+  description:
+    'CS student at Islington College, Kathmandu. I build ML models and the products around them — PyTorch, RAG pipelines, agent tool-calling, full-stack deployment.',
+  keywords: [
+    'AI Engineer',
+    'ML Engineer',
+    'Full-Stack Developer',
+    'PyTorch',
+    'RAG',
+    'Next.js',
+    'TypeScript',
+    'Freelance',
+  ],
   authors: [{ name: 'Praansu Karmacharya' }],
   creator: 'Praansu Karmacharya',
-  publisher: 'Praansu Karmacharya',
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://praansu.github.io',
     title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
-    description: 'CS student at Islington College, Kathmandu. Building ML models & AI products.',
-    siteName: 'Praansu Karmacharya Portfolio',
+    description:
+      'CS student at Islington College, Kathmandu. Building ML models & AI products from scratch.',
+    siteName: 'Praansu Karmacharya',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
-    description: 'CS student at Islington College, Kathmandu. Building ML models & AI products.',
-  },
-  verification: {
-    google: 'google-site-verification-code',
+    description:
+      'CS student at Islington College, Kathmandu. Building ML models & AI products from scratch.',
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+    { media: '(prefers-color-scheme: light)', color: '#FAF7F1' },
+    { media: '(prefers-color-scheme: dark)', color: '#14110D' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -57,14 +75,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable}`} suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body className={`${inter.className} ${merriweather.className} antialiased`}>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${playfair.variable} ${sourceSerif.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

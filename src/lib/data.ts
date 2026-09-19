@@ -47,7 +47,7 @@ export const projects = [
   {
     name: 'ParkX',
     description: 'IoT smart parking system — ESP32 firmware, FastAPI backend, real-time web dashboard with AI chatbot and booking system.',
-    tech: ['ESP32', 'FastAPI', 'WebSockets', 'IoT'],
+    tech: ['ESP32', 'FastAPI', 'REST polling', 'IoT'],
     github: 'https://github.com/Praansu/ParkX',
     demo: null,
     icon: 'Server',

@@ -9,7 +9,7 @@ export function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 text-gray-600 dark:text-dark-300 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+      className="p-2 rounded-full border hairline text-ink-soft dark:text-cream-dim hover:text-accent-deep dark:hover:text-accent-pale transition-colors min-w-[44px] min-h-[44px] inline-flex items-center justify-center"
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
