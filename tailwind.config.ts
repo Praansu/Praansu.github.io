@@ -10,36 +10,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: {
-          DEFAULT: '#FAF7F1',
-          dim: '#F3EEE4',
+        // Light: drafting paper. Dark: blueprint.
+        sheet: {
+          DEFAULT: '#F2EFE6',
+          dim: '#E9E4D5',
         },
         ink: {
-          DEFAULT: '#1C1917',
-          soft: '#44403C',
-          faint: '#78716C',
+          DEFAULT: '#191512',
+          soft: '#4A443B',
+          faint: '#8A8175',
         },
-        rule: {
-          light: '#E3DACA',
-          dark: '#2B261F',
+        grid: {
+          light: '#DCD4BF',
+          dark: '#22344F',
         },
         night: {
-          DEFAULT: '#14110D',
-          raised: '#1D1913',
+          DEFAULT: '#0C1B2E',
+          raised: '#12263F',
         },
-        cream: {
-          DEFAULT: '#EDE6D6',
-          dim: '#A8A094',
+        chalk: {
+          DEFAULT: '#EDF2F7',
+          dim: '#9FB2C8',
+          faint: '#5F7391',
         },
-        accent: {
-          DEFAULT: '#1D4ED8',
-          deep: '#1E40AF',
-          pale: '#93C5FD',
+        signal: {
+          DEFAULT: '#FF4D00',
+          deep: '#C73A00',
+        },
+        brass: {
+          DEFAULT: '#8A6D1B',
+          pale: '#E4C65B',
+        },
+        stamp: {
+          DEFAULT: '#1E40AF',
+          pale: '#7FA6F5',
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+        display: ['Anton', '"Arial Narrow"', 'sans-serif'],
+        serifit: ['"Instrument Serif"', 'Georgia', 'serif'],
+        grotesk: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
     },

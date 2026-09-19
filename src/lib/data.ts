@@ -103,6 +103,12 @@ export const skills = {
 
 export const experience = [
   {
+    role: 'Junior AI Developer',
+    company: 'Aviyaan Tech',
+    period: '6-month internship',
+    description: 'Assisted in building and testing AI features for production web projects, working with Python ML tooling and LLM APIs under senior developers.',
+  },
+  {
     role: 'CS Student',
     company: 'Islington College, Kathmandu',
     period: '2023 — Present',

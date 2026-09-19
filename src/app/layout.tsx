@@ -1,21 +1,27 @@
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
+import { Anton, Instrument_Serif, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const playfair = Playfair_Display({
+const anton = Anton({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-display',
-  weight: ['500', '600', '700', '800'],
+  weight: ['400'],
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serifit',
+  weight: ['400'],
   style: ['normal', 'italic'],
 });
 
-const sourceSerif = Source_Serif_4({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-serif',
-  weight: ['400', '600', '700'],
-  style: ['normal', 'italic'],
+  variable: '--font-grotesk',
+  weight: ['400', '500', '600', '700'],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -61,8 +67,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAF7F1' },
-    { media: '(prefers-color-scheme: dark)', color: '#14110D' },
+    { media: '(prefers-color-scheme: light)', color: '#F2EFE6' },
+    { media: '(prefers-color-scheme: dark)', color: '#0C1B2E' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -77,7 +83,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${sourceSerif.variable} ${jetbrainsMono.variable}`}
+      className={`${anton.variable} ${instrumentSerif.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased">{children}</body>

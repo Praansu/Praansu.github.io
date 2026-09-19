@@ -10,16 +10,35 @@
     scroll-margin-top: 4.5rem;
   }
   ::selection {
-    background: #1d4ed8;
-    color: #faf7f1;
+    background: #ff4d00;
+    color: #f2efe6;
   }
   body {
-    @apply bg-paper text-ink font-serif dark:bg-night dark:text-cream;
-    font-feature-settings: 'rlig' 1, 'calt' 1, 'onum' 1;
+    @apply bg-sheet text-ink font-grotesk dark:bg-night dark:text-chalk;
     text-rendering: optimizeLegibility;
   }
-  /* Faint paper grain so flat areas feel printed, not digital */
+  /* Drafting-sheet grid, light mode */
   body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, #dcd4bf 1px, transparent 1px),
+      linear-gradient(to bottom, #dcd4bf 1px, transparent 1px);
+    background-size: 44px 44px;
+    opacity: 0.5;
+  }
+  /* Blueprint grid, dark mode */
+  .dark body::before {
+    background-image:
+      linear-gradient(to right, #22344f 1px, transparent 1px),
+      linear-gradient(to bottom, #22344f 1px, transparent 1px);
+    opacity: 0.55;
+  }
+  /* Paper grain over the grid so it feels printed, not digital */
+  body::after {
     content: '';
     position: fixed;
     inset: 0;
@@ -28,8 +47,8 @@
     opacity: 0.05;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
   }
-  .dark body::before {
-    opacity: 0.07;
+  .dark body::after {
+    opacity: 0.08;
   }
 }
 
@@ -37,18 +56,56 @@
   .text-balance {
     text-wrap: balance;
   }
-  .hairline {
-    @apply border-rule-light dark:border-rule-dark;
+  /* Giant condensed display, tight like a poster */
+  .display-poster {
+    font-family: Anton, 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    line-height: 0.88;
+    letter-spacing: 0.005em;
   }
-  /* Editorial drop cap for the opening lede */
-  .dropcap::first-letter {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 3.4em;
-    line-height: 0.85;
-    float: left;
-    padding-right: 0.12em;
-    padding-top: 0.05em;
+  /* Outlined ghost numerals */
+  .ghost-numeral {
+    font-family: Anton, 'Arial Narrow', sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
+    opacity: 0.55;
+    line-height: 1;
+    user-select: none;
+  }
+  /* Rotated sticker badge */
+  .sticker {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.14em];
+    @apply inline-block border-2 border-current px-3 py-1.5;
+    transform: rotate(-4deg);
+    box-shadow: 3px 3px 0 0 currentColor;
+  }
+  /* Perforated ticket edge for the featured build card */
+  .ticket-edge {
+    --notch: #f2efe6;
+    background-image: radial-gradient(circle at 8px 50%, var(--notch) 7px, transparent 7.5px);
+    background-size: 20px 20px;
+    background-repeat: repeat-y;
+    background-position: left center;
+  }
+  .dark .ticket-edge {
+    --notch: #0c1b2e;
+  }
+  /* Ticker marquee */
+  @keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 28s linear infinite;
+  }
+  /* Slow spin for the circular badge */
+  @keyframes slow-spin {
+    to { transform: rotate(360deg); }
+  }
+  .slow-spin {
+    animation: slow-spin 22s linear infinite;
   }
   /* Line-mask reveal: the observer watches the untransformed .mask
      wrapper; the inner .line carries the transform. Never put
@@ -65,7 +122,7 @@
   .mask-group.is-inview .mask > .line {
     transform: translateY(0);
   }
-  /* Growing hairline rules */
+  /* Growing rules */
   .rule-grow {
     transform: scaleX(0);
     transform-origin: left center;
@@ -73,6 +130,30 @@
   }
   .rule-grow.is-inview {
     transform: scaleX(1);
+  }
+  /* Hover fill sweep for spec rows */
+  .fill-sweep {
+    position: relative;
+    isolation: isolate;
+  }
+  .fill-sweep::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    @apply bg-ink dark:bg-chalk;
+  }
+  .fill-sweep:hover::before {
+    transform: scaleY(1);
+  }
+  .fill-sweep:hover {
+    @apply text-sheet dark:text-night;
+  }
+  .fill-sweep:hover .sweep-dim {
+    @apply text-sheet/70 dark:text-night/70;
   }
 }
 
@@ -86,6 +167,13 @@
   }
   .rule-grow {
     transform: none;
+    transition: none;
+  }
+  .ticker-track,
+  .slow-spin {
+    animation: none;
+  }
+  .fill-sweep::before {
     transition: none;
   }
 }
