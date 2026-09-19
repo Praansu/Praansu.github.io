@@ -219,8 +219,9 @@ export default function Home() {
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 mt-10 items-start">
               <Reveal delay={0.15}>
                 <p className="text-lg sm:text-xl leading-relaxed text-ink-soft dark:text-chalk-dim max-w-2xl">
-                  I&apos;m Praansu — CS student in Kathmandu, ex-intern at{' '}
-                  <strong className="text-ink dark:text-chalk font-semibold">Aviyaan Tech</strong>.
+                  I&apos;m Praansu — CS student in Kathmandu, 6 months as a{' '}
+                  <strong className="text-ink dark:text-chalk font-semibold">Junior AI Developer</strong>{' '}
+                  at Aviyaan Tech.
                   I work in PyTorch, RAG pipelines, and agent tool-calling, and I build the
                   full-stack products around them. Every project below exists because I wanted
                   to learn one specific thing properly.
@@ -245,6 +246,13 @@ export default function Home() {
                   <div className="flex justify-between gap-3 border-b border-ink/20 dark:border-chalk/20 pb-2">
                     <dt className="uppercase tracking-[0.18em] opacity-70">Role</dt>
                     <dd className="text-right">Junior AI Developer</dd>
+                  </div>
+                  <div className="flex justify-between gap-3 border-b border-ink/20 dark:border-chalk/20 py-2">
+                    <dt className="uppercase tracking-[0.18em] opacity-70">Status</dt>
+                    <dd className="text-right inline-flex items-center gap-2">
+                      <span aria-hidden className="w-2 h-2 rounded-full bg-signal motion-safe:animate-pulse" />
+                      Open to freelance
+                    </dd>
                   </div>
                   <div className="flex justify-between gap-3 border-b border-ink/20 dark:border-chalk/20 py-2">
                     <dt className="uppercase tracking-[0.18em] opacity-70">Base</dt>
@@ -566,7 +574,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto border-t-2 border-ink dark:border-chalk pt-6 flex flex-col sm:flex-row gap-2 sm:items-baseline justify-between">
             <p className="font-mono text-xs text-ink-faint dark:text-chalk-dim">
               Set in Anton, Instrument Serif, Space Grotesk &amp; JetBrains Mono. Built with
-              Next.js — no trackers, no cookies.
+              Next.js — no trackers, no cookies. Last revised Sep 2026.
             </p>
             <p className="font-mono text-xs text-ink-faint dark:text-chalk-dim">
               KTM <KtClock /> · © {new Date().getFullYear()} Praansu Karmacharya

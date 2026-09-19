@@ -105,8 +105,8 @@ export const experience = [
   {
     role: 'Junior AI Developer',
     company: 'Aviyaan Tech',
-    period: '6-month internship',
-    description: 'Assisted in building and testing AI features for production web projects, working with Python ML tooling and LLM APIs under senior developers.',
+    period: '6 months experience',
+    description: 'Built and tested AI features for production web projects with Python ML tooling and LLM APIs, working alongside senior developers. First time seeing how AI code survives contact with real clients.',
   },
   {
     role: 'CS Student',
