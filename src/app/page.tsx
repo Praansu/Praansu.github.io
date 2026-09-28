@@ -42,10 +42,11 @@ function KtClock() {
 
 const NAV = [
   { n: '01', label: 'Work', href: '#work' },
-  { n: '02', label: 'Stack', href: '#stack' },
-  { n: '03', label: 'Record', href: '#record' },
-  { n: '04', label: 'Hire', href: '#hire' },
-  { n: '05', label: 'Contact', href: '#contact' },
+  { n: '02', label: 'Notes', href: '#notes' },
+  { n: '03', label: 'Stack', href: '#stack' },
+  { n: '04', label: 'Record', href: '#record' },
+  { n: '05', label: 'Hire', href: '#hire' },
+  { n: '06', label: 'Contact', href: '#contact' },
 ];
 
 const TICKER = [
@@ -59,6 +60,40 @@ const TICKER = [
   'Docker',
   'YOLO',
   'OpenCV',
+];
+
+const NOTES = [
+  {
+    code: 'NOTE-01',
+    project: 'Small Agent Reliability',
+    href: 'https://github.com/Praansu/small-agent-reliability',
+    q: 'Do small models work as tool agents?',
+    approach:
+      'Scored 9 open-weight models, 1B to 9B, across 31 capability tasks and 14 reliability tasks — all run locally through Ollama, so the study reproduces on a laptop.',
+    finding: 'Reliability is not model size. Code-specialised training beats raw scale.',
+    result: 'QWEN 2.5 CODER 7B — 85% COMPOSITE',
+  },
+  {
+    code: 'NOTE-02',
+    project: 'AI Research Agent',
+    href: 'https://github.com/Praansu/ai-research-agent',
+    q: 'Can an agent loop stay readable with no framework?',
+    approach:
+      'Hand-rolled loop in plain Python: route each question to document search, web search, or both — and stream every tool call to the browser over SSE as it happens.',
+    finding: 'Transparency is a feature. Watching the loop work builds more trust than any answer.',
+    result: '~120 LINES OF PLAIN PYTHON',
+  },
+  {
+    code: 'NOTE-03',
+    project: 'Vehicle Image Classifier',
+    href: 'https://github.com/Praansu/vehicle-image-classifier',
+    q: 'Can 400 images make an honest classifier?',
+    approach:
+      'ResNet-18 transfer learning over four vehicle classes, served behind FastAPI and containerised with Docker.',
+    finding:
+      'One headline number lies. Per-class accuracy plus a confusion matrix shows which class the model is guessing at.',
+    result: '90% OVERALL — REPORTED PER-CLASS',
+  },
 ];
 
 function SectionHead({
@@ -395,11 +430,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 02 — Stack */}
-        <section id="stack" className="py-16 sm:py-24 px-5 sm:px-8">
+        {/* 02 — Field notes */}
+        <section id="notes" className="py-16 sm:py-24 px-5 sm:px-8">
           <div className="max-w-6xl mx-auto">
             <SectionHead
               n="02"
+              kick="Build notes"
+              title="What each build"
+              accent="actually taught."
+              standfirst="Short notes, no tutorials. The question I started with, what I did, and the one result that stuck."
+            />
+            <ol className="grid md:grid-cols-3 gap-5">
+              {NOTES.map((note, i) => (
+                <li key={note.code}>
+                  <Reveal delay={Math.min(i * 0.06, 0.18)}>
+                    <article className="border-2 border-ink dark:border-chalk">
+                      <p className="font-mono text-[11px] uppercase tracking-[0.2em] border-b-2 border-ink dark:border-chalk px-4 py-2 flex justify-between items-center gap-2">
+                        <span>{note.code}</span>
+                        <a
+                          href={note.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 underline underline-offset-4 min-h-[44px]"
+                        >
+                          {note.project} <ArrowUpRight className="w-3 h-3" />
+                        </a>
+                      </p>
+                      <p className="display-poster text-2xl sm:text-3xl leading-tight px-4 pt-4 text-balance">
+                        {note.q}
+                      </p>
+                      <p className="px-4 pt-3 text-[15px] leading-relaxed text-ink-soft dark:text-chalk-dim">
+                        {note.approach}
+                      </p>
+                      <p className="px-4 pt-3 font-serifit italic text-lg text-signal-deep dark:text-signal">
+                        {note.finding}
+                      </p>
+                      <p className="mt-4 border-t-2 border-ink dark:border-chalk px-4 py-3 font-mono text-xs tracking-[0.08em] text-ink-faint dark:text-chalk-dim">
+                        {note.result}
+                      </p>
+                    </article>
+                  </Reveal>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* 03 — Stack */}
+        <section id="stack" className="py-16 sm:py-24 px-5 sm:px-8">
+          <div className="max-w-6xl mx-auto">
+            <SectionHead
+              n="03"
               kick="Capabilities"
               title="What I reach"
               accent="for."
@@ -430,7 +511,7 @@ export default function Home() {
         {/* 03 — Record */}
         <section id="record" className="py-16 sm:py-24 px-5 sm:px-8">
           <div className="max-w-6xl mx-auto">
-            <SectionHead n="03" kick="Background" title="Service record." />
+            <SectionHead n="04" kick="Background" title="Service record." />
             <ol className="max-w-4xl">
               {experience.map((exp, i) => (
                 <li key={exp.role}>
@@ -463,7 +544,7 @@ export default function Home() {
         <section id="hire" className="py-16 sm:py-24 px-5 sm:px-8">
           <div className="max-w-6xl mx-auto">
             <SectionHead
-              n="04"
+              n="05"
               kick="Services"
               title="Open job"
               accent="tickets."
@@ -516,7 +597,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <Reveal>
               <p className="font-mono text-xs tracking-[0.22em] uppercase text-stamp dark:text-stamp-pale mb-4">
-                FIG. 05 — Contact
+                FIG. 06 — Contact
               </p>
             </Reveal>
             <Reveal delay={0.06}>
