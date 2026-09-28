@@ -34,7 +34,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
   description:
-    'CS student at Islington College, Kathmandu. I build ML models and the products around them — PyTorch, RAG pipelines, agent tool-calling, full-stack deployment.',
+    'BSc (Hons) Computing with AI student at Islington College, Kathmandu. I build ML models and the products around them — PyTorch, RAG pipelines, agent tool-calling, full-stack deployment.',
   keywords: [
     'AI Engineer',
     'ML Engineer',
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     url: 'https://praansu.github.io',
     title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
     description:
-      'CS student at Islington College, Kathmandu. Building ML models & AI products from scratch.',
+      'BSc (Hons) Computing with AI at Islington College, Kathmandu. Building ML models & AI products from scratch.',
     siteName: 'Praansu Karmacharya',
   },
   twitter: {
     card: 'summary',
     title: 'Praansu Karmacharya — AI/ML Engineer & Full-Stack Developer',
     description:
-      'CS student at Islington College, Kathmandu. Building ML models & AI products from scratch.',
+      'BSc (Hons) Computing with AI at Islington College, Kathmandu. Building ML models & AI products from scratch.',
   },
 };
 

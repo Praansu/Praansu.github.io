@@ -177,3 +177,13 @@
     transition: none;
   }
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body::before,
+  body::after {
+    display: none !important;
+  }
+}

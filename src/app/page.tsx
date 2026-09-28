@@ -254,9 +254,9 @@ export default function Home() {
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 mt-10 items-start">
               <Reveal delay={0.15}>
                 <p className="text-lg sm:text-xl leading-relaxed text-ink-soft dark:text-chalk-dim max-w-2xl">
-                  I&apos;m Praansu — CS student in Kathmandu, 6 months as a{' '}
-                  <strong className="text-ink dark:text-chalk font-semibold">Junior AI Developer</strong>{' '}
-                  at Aviyaan Tech.
+                  I&apos;m Praansu — BSc (Hons) Computing with AI student in Kathmandu,{' '}
+                  interning as a <strong className="text-ink dark:text-chalk font-semibold">Junior AI Developer</strong>{' '}
+                  at Aviyaan Tech since March 2026.
                   I work in PyTorch, RAG pipelines, and agent tool-calling, and I build the
                   full-stack products around them. Every project below exists because I wanted
                   to learn one specific thing properly.
@@ -548,7 +548,7 @@ export default function Home() {
               kick="Services"
               title="Open job"
               accent="tickets."
-              standfirst="Production-ready AI/ML systems and full-stack products — contract work, freelance projects, and collaborations worth doing."
+              standfirst="Production-ready AI/ML systems and full-stack products — contract work and collaborations worth doing."
             />
             <ol className="grid sm:grid-cols-2 gap-5">
               {freelanceServices.slice(0, 8).map((service, i) => (
@@ -626,6 +626,7 @@ export default function Home() {
             <Reveal delay={0.2}>
               <div className="mt-12 max-w-2xl">
                 {[
+                  { l: 'Résumé', v: 'one-page spec sheet (PDF via print)', h: '/resume' },
                   { l: 'GitHub', v: 'github.com/Praansu', h: 'https://github.com/Praansu' },
                   { l: 'LinkedIn', v: 'praansu-karmacharya', h: 'https://np.linkedin.com/in/praansu-karmacharya-694944368' },
                   { l: 'Portfolio', v: 'praansu.github.io', h: 'https://praansu.github.io' },

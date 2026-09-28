@@ -103,22 +103,25 @@ export const skills = {
 
 export const experience = [
   {
-    role: 'Junior AI Developer',
+    role: 'Junior AI Developer — Intern',
     company: 'Aviyaan Tech',
-    period: '6 months experience',
-    description: 'Built and tested AI features for production web projects with Python ML tooling and LLM APIs, working alongside senior developers. First time seeing how AI code survives contact with real clients.',
+    period: 'Mar 2026 — Present',
+    description:
+      'Interning as a junior AI developer: building and experimenting with ML models — ensemble methods for traffic-count estimation, plus road-damage segmentation and classification — from data prep through training and evaluation.',
   },
   {
-    role: 'CS Student',
+    role: 'BSc (Hons) Computing with AI',
     company: 'Islington College, Kathmandu',
-    period: '2023 — Present',
-    description: 'Bachelor of Computer Science. Focus on ML, AI, and full-stack development.',
+    period: '2023 — 2028',
+    description:
+      'Undergraduate degree focused on AI and ML. Coursework and self-directed builds in PyTorch, RAG pipelines, agent tool-calling, and full-stack deployment.',
   },
   {
-    role: 'Freelance AI/ML Engineer',
-    company: 'Self-employed',
+    role: 'Independent Builder',
+    company: 'Personal & demo projects',
     period: '2024 — Present',
-    description: 'Building RAG pipelines, custom agent loops, ML model deployment, and full-stack AI products for clients.',
+    description:
+      'Learning in public: RAG loops, agent harnesses, vision models, and a full-stack demo storefront (EcoVerda). No client work yet — available for freelance.',
   },
 ];
 
