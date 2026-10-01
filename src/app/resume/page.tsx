@@ -146,6 +146,13 @@ export default function ResumePage() {
             <span className="font-mono text-xs">2025 — 2028</span>
           </div>
           <p className="mt-1 text-[15px]">Focus on machine learning, AI systems, and full-stack development.</p>
+          <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="text-lg font-semibold">
+              +2 Science (Computer Science) — Global School of Science
+            </h2>
+            <span className="font-mono text-xs">2023 — 2025</span>
+          </div>
+          <p className="mt-1 text-[15px]">Higher secondary education in the Science stream with Computer Science.</p>
         </section>
 
         <Rule />

@@ -117,6 +117,13 @@ export const experience = [
       'Undergraduate degree focused on AI and ML. Coursework and self-directed builds in PyTorch, RAG pipelines, agent tool-calling, and full-stack deployment.',
   },
   {
+    role: '+2 Science (Computer Science)',
+    company: 'Global School of Science',
+    period: '2023 — 2025',
+    description:
+      'Higher secondary education in the Science stream with Computer Science. Foundation in physics, chemistry, mathematics, and programming.',
+  },
+  {
     role: 'Independent Builder',
     company: 'Personal & demo projects',
     period: '2024 — Present',
