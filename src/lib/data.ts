@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     name: 'Vehicle Image Classifier',
-    description: 'ResNet18 transfer learning classifying bus/car/motorcycle/truck at 90% accuracy (400 images). Includes confusion matrix visualization and FastAPI inference API.',
+    description: 'ResNet18 transfer learning classifying bus/car/motorcycle/truck at 90% accuracy (400 images). Training set labeled with my own Tkinter annotation tool. Includes confusion matrix visualization and FastAPI inference API.',
     tech: ['PyTorch', 'ResNet18', 'FastAPI', 'Docker'],
     github: 'https://github.com/Praansu/vehicle-image-classifier',
     demo: 'https://praansu.github.io/vehicle-image-classifier',
@@ -112,7 +112,7 @@ export const experience = [
   {
     role: 'BSc (Hons) Computing with AI',
     company: 'Islington College, Kathmandu',
-    period: '2023 — 2028',
+    period: '2025 — 2028',
     description:
       'Undergraduate degree focused on AI and ML. Coursework and self-directed builds in PyTorch, RAG pipelines, agent tool-calling, and full-stack deployment.',
   },

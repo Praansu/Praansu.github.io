@@ -60,7 +60,7 @@ export default function ResumePage() {
             Junior AI Developer intern at Aviyaan Tech (Mar 2026 — Present), building and
             experimenting with ML models — ensemble methods for traffic-count estimation and
             road-damage segmentation and classification. BSc (Hons) Computing with AI at
-            Islington College, Kathmandu (2023 — 2028). Self-directed builds in RAG pipelines,
+            Islington College, Kathmandu (2025 — 2028). Self-directed builds in RAG pipelines,
             agent tool-calling, and vision models, each with honest evaluation.
           </p>
         </section>
@@ -117,7 +117,8 @@ export default function ResumePage() {
             </li>
             <li>
               <strong>Vehicle Image Classifier</strong> — ResNet-18 transfer learning, 4
-              classes, with confusion matrix and per-class accuracy; served via FastAPI,
+              classes, training images labeled with a self-built Tkinter annotation
+              tool; confusion matrix and per-class accuracy; served via FastAPI,
               containerised.
               <span className="font-mono text-xs block opacity-70">
                 PyTorch · FastAPI · Docker · github.com/Praansu/vehicle-image-classifier
@@ -142,7 +143,7 @@ export default function ResumePage() {
             <h2 className="text-lg font-semibold">
               BSc (Hons) Computing with AI — Islington College, Kathmandu
             </h2>
-            <span className="font-mono text-xs">2023 — 2028</span>
+            <span className="font-mono text-xs">2025 — 2028</span>
           </div>
           <p className="mt-1 text-[15px]">Focus on machine learning, AI systems, and full-stack development.</p>
         </section>
