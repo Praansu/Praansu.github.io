@@ -119,7 +119,7 @@ export const experience = [
   {
     role: '+2 Science (Computer Science)',
     company: 'Global School of Science',
-    period: '2023 — 2025',
+    period: '2024 — 2025',
     description:
       'Higher secondary education in the Science stream with Computer Science. Foundation in physics, chemistry, mathematics, and programming.',
   },

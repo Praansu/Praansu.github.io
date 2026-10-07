@@ -150,7 +150,7 @@ export default function ResumePage() {
             <h2 className="text-lg font-semibold">
               +2 Science (Computer Science) — Global School of Science
             </h2>
-            <span className="font-mono text-xs">2023 — 2025</span>
+            <span className="font-mono text-xs">2024 — 2025</span>
           </div>
           <p className="mt-1 text-[15px]">Higher secondary education in the Science stream with Computer Science.</p>
         </section>
