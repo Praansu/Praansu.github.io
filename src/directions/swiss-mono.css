@@ -1,0 +1,38 @@
+/* ============ DIRECTION 2/5 — Swiss Mono ============ */
+/* Off-white, near-black, mono + grotesk, visible grid lines, bordered cells */
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource/space-mono";
+
+:root {
+  --bg: #f4f4f2;
+  --bg-deep: #e9e9e6;
+  --bg-soft: #fafafa;
+  --surface: rgba(17, 17, 16, 0.04);
+  --surface-2: rgba(17, 17, 16, 0.08);
+  --surface-hover: rgba(17, 17, 16, 0.1);
+  --border: rgba(17, 17, 16, 0.2);
+  --border-strong: rgba(17, 17, 16, 0.45);
+  --ink: #111110;
+  --muted: #52525b;
+  --amber: #e11d48;
+  --amber-deep: #be123c;
+  --lime: #16a34a;
+  --steel: #71717a;
+  --font: "Space Grotesk", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-serif: "Space Grotesk", Georgia, serif;
+  --mono: "Space Mono", ui-monospace, "SF Mono", monospace;
+  --grad-signal: linear-gradient(100deg, #e11d48 0%, #be123c 100%);
+}
+
+body { color: var(--ink); background: var(--bg); }
+::selection { background: rgba(225, 29, 72, 0.25); }
+.bg-grid { background-image: linear-gradient(rgba(17,17,16,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,16,0.05) 1px, transparent 1px); }
+.nav-inner { background: rgba(244, 244, 242, 0.82); }
+.btn-primary { color: #fafafa; }
+.hero-console { background: linear-gradient(160deg, #fafafa, #ededEA); }
+.console-row { color: #3f3f46; background: rgba(17, 17, 16, 0.03); }
+.hero-badge { color: #52525b; }
+.hero-sub { color: #52525b; }
+.card p { color: #52525b; }
+.hero h1, .section-title { font-weight: 700; }
