@@ -1,0 +1,75 @@
+version: 2
+updates:
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Asia/Kathmandu"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "deps(npm)"
+    groups:
+      react-ecosystem:
+        patterns:
+          - "react*"
+          - "@types/react*"
+          - "react-dom*"
+        update-types:
+          - "minor"
+          - "patch"
+      build-tools:
+        patterns:
+          - "vite*"
+          - "@vitejs/plugin-react*"
+          - "oxlint*"
+        update-types:
+          - "minor"
+          - "patch"
+      ui-libraries:
+        patterns:
+          - "framer-motion*"
+          - "motion*"
+          - "lucide-react*"
+          - "tailwindcss*"
+          - "@tailwindcss/vite*"
+        update-types:
+          - "minor"
+          - "patch"
+      three-js:
+        patterns:
+          - "three*"
+          - "@react-three/fiber*"
+          - "@react-three/drei*"
+        update-types:
+          - "minor"
+          - "patch"
+      animation:
+        patterns:
+          - "gsap*"
+          - "@gsap/react*"
+          - "animejs*"
+          - "lenis*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Asia/Kathmandu"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "deps(actions)"
